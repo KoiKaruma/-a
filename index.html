@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phang Nga Tourism</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg-color:#ffffff;
+    --text-color:#000000;
+    --card-bg:#f2f2f2;
+}
+body.dark{
+    --bg-color:#0b0b0b;
+    --text-color:#ffffff;
+    --card-bg:#111;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:var(--bg-color);
+    color:var(--text-color);
+    transition:.3s;
+}
+
+/* TOGGLE */
+.toggle{
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:10px 18px;
+    border-radius:30px;
+    border:1px solid var(--text-color);
+    cursor:pointer;
+    font-size:14px;
+    background:none;
+    z-index:1000;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.6)),
+    url("https://upload.wikimedia.org/wikipedia/commons/8/8b/Phang_Nga_Bay.jpg") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+body.dark .hero{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://upload.wikimedia.org/wikipedia/commons/8/8b/Phang_Nga_Bay.jpg") center/cover;
+}
+
+.hero h1{
+    font-size:6rem;
+    letter-spacing:12px;
+    animation:fadeUp 2s ease;
+}
+
+/* SECTION */
+.section{
+    padding:80px 10%;
+}
+.section h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.card{
+    background:var(--card-bg);
+    border-radius:15px;
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(50px);
+    transition:.8s ease;
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(60px)}
+    to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleMode()">🌙 / 🌞</button>
+
+<section class="hero">
+    <h1>PHANG NGA</h1>
+</section>
+
+<section class="section">
+<h2>Tourist Attractions</h2>
+
+<div class="cards">
+
+<a href="/New folder/khaotapu.html" class="card-link"><div class="card"><img src="https://cdn.sanity.io/images/nxpteyfv/goguides/7f150b81d47a029f46e561f67bd461f8279df01a-1600x1066.jpg"><div class="card-content"><h3>เขาตะปู</h3></div></div></a>
+
+<a href="/New folder/khaokhainui.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/5.-%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B9%84%E0%B8%82%E0%B9%88%E0%B8%99%E0%B8%B8%E0%B9%89%E0%B8%A2.webp"><div class="card-content"><h3>เขาไข่นุ้ย</h3></div></div></a>
+
+<a href="/New folder/similan.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/7.%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%AA%E0%B8%B4%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B1%E0%B8%99.webp"><div class="card-content"><h3>เกาะสิมิลัน</h3></div></div></a>
+
+<a href="/New folder/klongsangne.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/9.%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%99%E0%B9%88%E0%B8%AB%E0%B9%8C.webp"><div class="card-content"><h3>คลองสังเน่ห์</h3></div></div></a>
+
+<a href="/New folder/phangngabay.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/11.-%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%A7%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2.webp"><div class="card-content"><h3>อ่าวพังงา</h3></div></div></a>
+
+<a href="/New folder/phutacho.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/17.-%E0%B8%A0%E0%B8%B9%E0%B8%95%E0%B8%B2%E0%B8%88%E0%B8%AD.webp"><div class="card-content"><h3>ภูตาจอ</h3></div></div></a>
+
+<a href="/New folder/sranangmanora.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/15.-%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%81%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B9%82%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%AB%E0%B9%8C.webp"><div class="card-content"><h3>น้ำตกสระนางมโนราห์</h3></div></div></a>
+
+<a href="/New folder/mokenvillage.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/19.-%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%AD%E0%B9%81%E0%B8%81%E0%B8%99.webp"><div class="card-content"><h3>หมู่บ้านมอแกน</h3></div></div></a>
+
+<a href="/New folder/payanakharatcave.html" class="card-link"><div class="card"><img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/5-.%E0%B8%96%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%8D%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%8A-1024x683.webp"><div class="card-content"><h3>ถ้ำพญานาคราช</h3></div></div></a>
+
+</div>
+</section>
+
+<script>
+function toggleMode(){
+    document.body.classList.toggle("dark");
+}
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+    cards.forEach(c=>{
+        if(c.getBoundingClientRect().top<window.innerHeight-100){
+            c.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

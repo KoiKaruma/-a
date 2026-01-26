@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>หมู่บ้านมอแกน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== STYLE เหมือนกันทุกไฟล์ ===== */
+:root{--bg:#fff;--text:#000}
+body.dark{--bg:#0b0b0b;--text:#fff}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:var(--bg);color:var(--text);transition:.3s}
+.toggle{position:fixed;top:20px;right:20px;padding:10px 18px;border-radius:30px;border:1px solid var(--text);background:none;cursor:pointer;z-index:1000}
+.intro{height:100vh;display:flex;align-items:center;justify-content:center;position:fixed;inset:0;background:var(--bg);z-index:999;transition:.8s}
+.intro.hide{opacity:0;pointer-events:none}
+.intro button{padding:18px 50px;font-size:1.2rem;border-radius:50px;border:2px solid var(--text);background:none;cursor:pointer}
+.intro button:hover{background:var(--text);color:var(--bg)}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;opacity:0;transition:1.2s}
+.hero.show{opacity:1}
+.center-text{text-align:center;opacity:0;transform:translateY(40px);transition:1.2s .5s}
+.center-text.show{opacity:1;transform:none}
+.center-text h1{font-size:4.5rem;letter-spacing:6px}
+.center-text p{margin-top:12px;font-size:1.2rem;opacity:.7}
+.section{min-height:100vh;display:flex;align-items:center;gap:80px;padding:80px}
+.section img{width:45%;border-radius:30px}
+.text{width:55%;opacity:0;transform:translateY(60px);transition:1s}
+.text.show{opacity:1;transform:none}
+.text h2{font-size:3rem;margin-bottom:20px}
+.text p{font-size:1.15rem;line-height:1.9;opacity:.85}
+.back{display:block;text-align:center;margin:80px 0;text-decoration:none;color:var(--text)}
+@media(max-width:900px){
+.section{flex-direction:column;padding:50px 30px}
+.section img,.text{width:100%}
+.center-text h1{font-size:2.8rem}
+}
+</style>
+</head>
+<body>
+
+<button class="toggle" onclick="document.body.classList.toggle('dark')">🌙 / 🌞</button>
+
+<div class="intro" id="intro"><button onclick="startPage()">ENTER</button></div>
+
+<section class="hero" id="hero">
+<div class="center-text" id="centerText">
+<h1>MOGANVILLAGE</h1>
+<p>Phang Nga, Thailand</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://cdn.sanity.io/images/nxpteyfv/goguides/7f150b81d47a029f46e561f67bd461f8279df01a-1600x1066.jpg">
+<div class="text">
+<h2>หมู่บ้านมอแกนเป็นยังไง?</h2>
+<p>หมู่บ้านมอแกนเป็นชุมชนของชาวเลพื้นเมืองที่มีวิถีชีวิตผูกพันกับทะเลอย่างใกล้ชิด ชาวมอแกนดำรงชีวิตด้วยการประมงพื้นบ้านและการใช้ทรัพยากรธรรมชาติอย่างเรียบง่าย บ้านเรือนส่วนใหญ่อยู่ใกล้ชายฝั่งหรือบนเรือ มีวัฒนธรรม ภาษา และประเพณีที่เป็นเอกลักษณ์ บรรยากาศของหมู่บ้านเงียบสงบ สะท้อนวิถีชีวิตดั้งเดิมและภูมิปัญญาท้องถิ่น ทำให้หมู่บ้านมอแกนเป็นแหล่งเรียนรู้ทางวัฒนธรรมและการท่องเที่ยวเชิงอนุรักษ์ที่สำคัญของจังหวัดพังงา</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/James_Bond_Island_Thailand.jpg">
+<div class="text">
+<h2>ประวัติความเป็นมา</h2>
+<p>หมู่บ้านมอแกนเป็นชุมชนของชาวมอแกนหรือชาวเล ซึ่งเป็นชนพื้นเมืองดั้งเดิมที่อาศัยอยู่บริเวณทะเลอันดามันมาตั้งแต่อดีต ชาวมอแกนมีวิถีชีวิตเร่ร่อนทางทะเล ใช้เรือเป็นที่อยู่อาศัยและดำรงชีวิตด้วยการหาปลาและทรัพยากรทางทะเล ต่อมาเมื่อมีการเปลี่ยนแปลงทางสังคมและการจัดการพื้นที่ ชาวมอแกนบางส่วนได้ตั้งถิ่นฐานถาวรเป็นหมู่บ้าน เพื่อความสะดวกในการดำรงชีวิต การศึกษา และการติดต่อกับภายนอก แม้จะมีการปรับตัวตามยุคสมัย แต่ชาวมอแกนยังคงรักษาวัฒนธรรม ความเชื่อ และวิถีชีวิตดั้งเดิมไว้ ทำให้หมู่บ้านมอแกนเป็นแหล่งวัฒนธรรมที่สำคัญของจังหวัดพังงา</p>
+</div>
+</section>
+<section class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/James_Bond_Island_Thailand.jpg">
+    <div class="text">
+        <h2>ลักษณะเด่นของหมู่บ้านมอแกน</h2>
+        <p>
+            หมู่บ้านมอแกนมีลักษณะเด่นด้านวิถีชีวิตของชาวเลที่ผูกพันกับทะเลอย่างใกล้ชิด มีวัฒนธรรม ภาษา และประเพณีที่เป็นเอกลักษณ์เฉพาะตัว ชาวบ้านยังคงดำรงชีวิตอย่างเรียบง่ายและพึ่งพาทรัพยากรธรรมชาติเป็นหลัก บริเวณรอบ ๆ หมู่บ้านรายล้อมด้วยทะเลอันดามันและธรรมชาติที่อุดมสมบูรณ์ บรรยากาศเงียบสงบ เหมาะสำหรับการเรียนรู้วัฒนธรรมและการท่องเที่ยวเชิงอนุรักษ์
+        </p>
+        <p>
+        
+        </p>
+    </div>
+</section>
+
+<a href="/New folder/index.html" class="back">← Back to Home</a>
+
+<script>
+function startPage(){
+intro.classList.add('hide');
+hero.classList.add('show');
+centerText.classList.add('show');
+}
+const texts=document.querySelectorAll('.text');
+window.addEventListener('scroll',()=>{texts.forEach(t=>{if(t.getBoundingClientRect().top<innerHeight-120)t.classList.add('show')})});
+</script>
+</body>
+</html>

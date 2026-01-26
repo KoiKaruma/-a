@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>คลองสังเน่ห์</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== STYLE เหมือนกันทุกไฟล์ ===== */
+:root{--bg:#fff;--text:#000}
+body.dark{--bg:#0b0b0b;--text:#fff}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:var(--bg);color:var(--text);transition:.3s}
+.toggle{position:fixed;top:20px;right:20px;padding:10px 18px;border-radius:30px;border:1px solid var(--text);background:none;cursor:pointer;z-index:1000}
+.intro{height:100vh;display:flex;align-items:center;justify-content:center;position:fixed;inset:0;background:var(--bg);z-index:999;transition:.8s}
+.intro.hide{opacity:0;pointer-events:none}
+.intro button{padding:18px 50px;font-size:1.2rem;border-radius:50px;border:2px solid var(--text);background:none;cursor:pointer}
+.intro button:hover{background:var(--text);color:var(--bg)}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;opacity:0;transition:1.2s}
+.hero.show{opacity:1}
+.center-text{text-align:center;opacity:0;transform:translateY(40px);transition:1.2s .5s}
+.center-text.show{opacity:1;transform:none}
+.center-text h1{font-size:4.5rem;letter-spacing:6px}
+.center-text p{margin-top:12px;font-size:1.2rem;opacity:.7}
+.section{min-height:100vh;display:flex;align-items:center;gap:80px;padding:80px}
+.section img{width:45%;border-radius:30px}
+.text{width:55%;opacity:0;transform:translateY(60px);transition:1s}
+.text.show{opacity:1;transform:none}
+.text h2{font-size:3rem;margin-bottom:20px}
+.text p{font-size:1.15rem;line-height:1.9;opacity:.85}
+.back{display:block;text-align:center;margin:80px 0;text-decoration:none;color:var(--text)}
+@media(max-width:900px){
+.section{flex-direction:column;padding:50px 30px}
+.section img,.text{width:100%}
+.center-text h1{font-size:2.8rem}
+}
+</style>
+</head>
+<body>
+
+<button class="toggle" onclick="document.body.classList.toggle('dark')">🌙 / 🌞</button>
+
+<div class="intro" id="intro"><button onclick="startPage()">ENTER</button></div>
+
+<section class="hero" id="hero">
+<div class="center-text" id="centerText">
+<h1>KLONGSANGNE</h1>
+<p>Phang Nga, Thailand</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://www.prd.go.th/th/file/get/file/20240819eaf53a0040b8eec7ad2f39e49149c757101702.jpg">
+<div class="text">
+<h2>คลองสังเน่ห์เป็นยังไง?</h2>
+<p>คลองสังเน่ห์เป็นคลองธรรมชาติที่มีบรรยากาศเงียบสงบและร่มรื่น โดดเด่นด้วยป่าชายเลนและต้นไม้ใหญ่ที่ขึ้นปกคลุมตลอดสองฝั่งคลอง ทำให้รู้สึกใกล้ชิดธรรมชาติอย่างมาก น้ำในคลองใสไหลเอื่อย สามารถล่องเรือชมทัศนียภาพและพบเห็นพืชพรรณรวมถึงสัตว์น้ำตามธรรมชาติ จนได้รับสมญานามว่า “ลิตเติลอเมซอน” และเป็นแหล่งท่องเที่ยวเชิงอนุรักษ์ที่สำคัญของจังหวัดพังงา</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://palanla.com/ckeditor/upload/files/id37/domestic_location/Little%20Amazon/003.jpg">
+<div class="text">
+<h2>ประวัติความเป็นมา</h2>
+<p>คลองสังเน่ห์เป็นคลองสั้นๆ ในตำบลบางนายสี อำเภอตะกั่วป่า จังหวัดพังงา มีต้นน้ำจากเขาบางเต่าไหลลงแม่น้ำตะกั่วป่า. สองฝั่งคลองปกคลุมด้วยป่าดิบชื้นอุดมสมบูรณ์ โดยเฉพาะต้นไทรโบราณอายุร้อยปีที่แผ่กิ่งก้านสาขา คล้ายอุโมงค์ธรรมชาติ.</p>
+</div>
+</section>
+<section class="section">
+    <img src="https://files.thailandtourismdirectory.go.th/assets/upload/2017/12/01/20171201aa45a1cd98c37f51a722ad5af95a14ce164315.jpg">
+    <div class="text">
+        <h2>ลักษณะเด่นของคลองสังเน่ห์</h2>
+        <p>
+            คลองสังเน่ห์เป็นคลองธรรมชาติที่มีความโดดเด่นด้านความอุดมสมบูรณ์ของระบบนิเวศป่าชายเลน ตลอดสองฝั่งคลองรายล้อมด้วยต้นไม้ขนาดใหญ่และพืชพรรณนานาชนิด บรรยากาศเงียบสงบ ร่มรื่น และใกล้ชิดธรรมชาติ จนได้รับสมญานามว่า “ลิตเติลอเมซอน” การล่องเรือภายในคลองทำให้นักท่องเที่ยวได้สัมผัสความงดงามของธรรมชาติอย่างใกล้ชิด พร้อมชมสัตว์น้ำและสัตว์ป่าตามธรรมชาติ เป็นแหล่งท่องเที่ยวเชิงอนุรักษ์ที่สำคัญของจังหวัดพังงา
+        </p>
+        <p>
+            บริเวณรอบคลองสังเน่ห์เต็มไปด้วยป่าชายเลนที่อุดมสมบูรณ์ บรรยากาศเงียบสงบ ร่มรื่น และใกล้ชิดธรรมชาติ สามารถพบเห็นพืชและสัตว์ตามธรรมชาติได้ตลอดเส้นทาง
+        </p>
+    </div>
+</section>
+
+<a href="/New folder/index.html" class="back">← Back to Home</a>
+
+<script>
+function startPage(){
+intro.classList.add('hide');
+hero.classList.add('show');
+centerText.classList.add('show');
+}
+const texts=document.querySelectorAll('.text');
+window.addEventListener('scroll',()=>{texts.forEach(t=>{if(t.getBoundingClientRect().top<innerHeight-120)t.classList.add('show')})});
+</script>
+</body>
+</html>

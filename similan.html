@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เขาตะปู</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== STYLE เหมือนกันทุกไฟล์ ===== */
+:root{--bg:#fff;--text:#000}
+body.dark{--bg:#0b0b0b;--text:#fff}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:var(--bg);color:var(--text);transition:.3s}
+.toggle{position:fixed;top:20px;right:20px;padding:10px 18px;border-radius:30px;border:1px solid var(--text);background:none;cursor:pointer;z-index:1000}
+.intro{height:100vh;display:flex;align-items:center;justify-content:center;position:fixed;inset:0;background:var(--bg);z-index:999;transition:.8s}
+.intro.hide{opacity:0;pointer-events:none}
+.intro button{padding:18px 50px;font-size:1.2rem;border-radius:50px;border:2px solid var(--text);background:none;cursor:pointer}
+.intro button:hover{background:var(--text);color:var(--bg)}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;opacity:0;transition:1.2s}
+.hero.show{opacity:1}
+.center-text{text-align:center;opacity:0;transform:translateY(40px);transition:1.2s .5s}
+.center-text.show{opacity:1;transform:none}
+.center-text h1{font-size:4.5rem;letter-spacing:6px}
+.center-text p{margin-top:12px;font-size:1.2rem;opacity:.7}
+.section{min-height:100vh;display:flex;align-items:center;gap:80px;padding:80px}
+.section img{width:45%;border-radius:30px}
+.text{width:55%;opacity:0;transform:translateY(60px);transition:1s}
+.text.show{opacity:1;transform:none}
+.text h2{font-size:3rem;margin-bottom:20px}
+.text p{font-size:1.15rem;line-height:1.9;opacity:.85}
+.back{display:block;text-align:center;margin:80px 0;text-decoration:none;color:var(--text)}
+@media(max-width:900px){
+.section{flex-direction:column;padding:50px 30px}
+.section img,.text{width:100%}
+.center-text h1{font-size:2.8rem}
+}
+</style>
+</head>
+<body>
+
+<button class="toggle" onclick="document.body.classList.toggle('dark')">🌙 / 🌞</button>
+
+<div class="intro" id="intro"><button onclick="startPage()">ENTER</button></div>
+
+<section class="hero" id="hero">
+<div class="center-text" id="centerText">
+<h1>SIMILAN ISLAND</h1>
+<p>Phang Nga, Thailand</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://www.leelawadee.holiday/userfiles/panoramic-view-tropical-similan-islands.jpg">
+<div class="text">
+<h2>เกาะสิมิลันเป็นยังไง?</h2>
+<p>เกาะสิมิลันเป็นหมู่เกาะกลางทะเลอันดามันที่มีชื่อเสียงระดับโลก โดดเด่นด้วยน้ำทะเลสีฟ้าใส หาดทรายขาวละเอียด และแนวปะการังที่สวยงาม อุดมสมบูรณ์ด้วยสัตว์ทะเลนานาชนิด เหมาะสำหรับการดำน้ำตื้นและดำน้ำลึก บรรยากาศของเกาะยังคงความเป็นธรรมชาติ เงียบสงบ และเป็นหนึ่งในแหล่งท่องเที่ยวทางทะเลที่สวยงามที่สุดของประเทศไทย</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/236/2024/05/28083857/similan-island.jpg">
+<div class="text">
+<h2>ประวัติความเป็นมา</h2>
+<p>เกาะสิมิลันเป็นหมู่เกาะที่เกิดขึ้นตามกระบวนการทางธรรมชาติในทะเลอันดามัน และเป็นพื้นที่ที่มีความอุดมสมบูรณ์ทางทรัพยากรทางทะเลมาอย่างยาวนาน เดิมเป็นพื้นที่ที่ชาวประมงใช้ประโยชน์ ต่อมาได้รับการสำรวจและพบว่ามีแนวปะการังและระบบนิเวศที่สมบูรณ์ จึงได้รับการประกาศเป็นอุทยานแห่งชาติหมู่เกาะสิมิลัน เพื่ออนุรักษ์ธรรมชาติและสิ่งแวดล้อม ภายหลังเกาะสิมิลันได้รับความนิยมจากนักท่องเที่ยวทั่วโลก โดยเฉพาะด้านการดำน้ำ จนกลายเป็นแหล่งท่องเที่ยวทางทะเลที่มีชื่อเสียงระดับนานาชาติของประเทศไทย</p>
+</div>
+</section>
+<section class="section">
+    <img src="https://my.kapook.com/imagescontent/fb_img/448/s_155980_7980.jpg">
+    <div class="text">
+        <h2>ลักษณะเด่นของเกาะสิมิลัน</h2>
+        <p>
+            เกาะสิมิลันมีลักษณะเด่นคือน้ำทะเลสีฟ้าใส หาดทรายขาวละเอียด และแนวปะการังที่อุดมสมบูรณ์ เป็นแหล่งดำน้ำตื้นและดำน้ำลึกที่มีชื่อเสียงระดับโลก สามารถพบเห็นสัตว์ทะเลหลากหลายชนิด บรรยากาศของเกาะยังคงความเป็นธรรมชาติ เงียบสงบ และมีทัศนียภาพทางทะเลที่สวยงามโดดเด่น
+        </p>
+        <p>
+            บริเวณรอบเกาะสิมิลันเป็นท้องทะเลอันดามันที่ใสสะอาด อุดมสมบูรณ์ด้วยแนวปะการังและสัตว์ทะเลหลากหลายชนิด บรรยากาศเงียบสงบและยังคงความเป็นธรรมชาติ เหมาะสำหรับการท่องเที่ยวเชิงอนุรักษ์และการดำน้ำ
+        </p>
+    </div>
+</section>
+<a href="/New folder/index.html" class="back">← Back to Home</a>
+
+<script>
+function startPage(){
+intro.classList.add('hide');
+hero.classList.add('show');
+centerText.classList.add('show');
+}
+const texts=document.querySelectorAll('.text');
+window.addEventListener('scroll',()=>{texts.forEach(t=>{if(t.getBoundingClientRect().top<innerHeight-120)t.classList.add('show')})});
+</script>
+</body>
+</html>

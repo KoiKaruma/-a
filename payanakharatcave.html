@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ถ้ำพญานาคราช</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== STYLE เหมือนกันทุกไฟล์ ===== */
+:root{--bg:#fff;--text:#000}
+body.dark{--bg:#0b0b0b;--text:#fff}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:var(--bg);color:var(--text);transition:.3s}
+.toggle{position:fixed;top:20px;right:20px;padding:10px 18px;border-radius:30px;border:1px solid var(--text);background:none;cursor:pointer;z-index:1000}
+.intro{height:100vh;display:flex;align-items:center;justify-content:center;position:fixed;inset:0;background:var(--bg);z-index:999;transition:.8s}
+.intro.hide{opacity:0;pointer-events:none}
+.intro button{padding:18px 50px;font-size:1.2rem;border-radius:50px;border:2px solid var(--text);background:none;cursor:pointer}
+.intro button:hover{background:var(--text);color:var(--bg)}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;opacity:0;transition:1.2s}
+.hero.show{opacity:1}
+.center-text{text-align:center;opacity:0;transform:translateY(40px);transition:1.2s .5s}
+.center-text.show{opacity:1;transform:none}
+.center-text h1{font-size:4.5rem;letter-spacing:6px}
+.center-text p{margin-top:12px;font-size:1.2rem;opacity:.7}
+.section{min-height:100vh;display:flex;align-items:center;gap:80px;padding:80px}
+.section img{width:45%;border-radius:30px}
+.text{width:55%;opacity:0;transform:translateY(60px);transition:1s}
+.text.show{opacity:1;transform:none}
+.text h2{font-size:3rem;margin-bottom:20px}
+.text p{font-size:1.15rem;line-height:1.9;opacity:.85}
+.back{display:block;text-align:center;margin:80px 0;text-decoration:none;color:var(--text)}
+@media(max-width:900px){
+.section{flex-direction:column;padding:50px 30px}
+.section img,.text{width:100%}
+.center-text h1{font-size:2.8rem}
+}
+</style>
+</head>
+<body>
+
+<button class="toggle" onclick="document.body.classList.toggle('dark')">🌙 / 🌞</button>
+
+<div class="intro" id="intro"><button onclick="startPage()">ENTER</button></div>
+
+<section class="hero" id="hero">
+<div class="center-text" id="centerText">
+<h1>NAGA CAVE</h1>
+<p>Phang Nga, Thailand</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/02/5-.%E0%B8%96%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%8D%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%8A-1024x683.webp">
+<div class="text">
+<h2>ถ้ำพญานาคราชเป็นยังไง?</h2>
+<p>ถ้ำพญานาคราชเป็นถ้ำศักดิ์สิทธิ์ที่มีบรรยากาศลึกลับและเงียบสงบ ภายในถ้ำมีหินงอกหินย้อยที่สวยงามตามธรรมชาติ และบางส่วนมีรูปร่างคล้ายพญานาค ทำให้เกิดความเชื่อและตำนานเล่าขานสืบต่อกันมา ชุมชนในพื้นที่ให้ความเคารพศรัทธา และใช้ถ้ำแห่งนี้เป็นสถานที่ประกอบพิธีกรรมหรือขอพรในเรื่องความเป็นสิริมงคล จึงเป็นทั้งแหล่งท่องเที่ยวทางธรรมชาติและแหล่งเรียนรู้ด้านความเชื่อและวัฒนธรรมของจังหวัดพังงา</p>
+</div>
+</section>
+
+<section class="section">
+<img src="https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/2000809565814/Khao-Lak-Three-Temples---1-Day-Tour-01331f2a-73a4-46ce-9c93-7cb0afaa4c81.jpeg?_src=imagekit&tr=c-at_max,h-250,q-100,w-412">
+<div class="text">
+<h2>ประวัติความเป็นมา</h2>
+<p>ถ้ำพญานาคราชเป็นถ้ำที่ชุมชนในพื้นที่รู้จักและให้ความเคารพศรัทธามาเป็นเวลานาน โดยมีตำนานเล่าขานสืบต่อกันมาว่าเป็นที่สถิตของพญานาคราช ผู้คุ้มครองแหล่งน้ำและผืนแผ่นดิน ในอดีตชาวบ้านมักใช้ถ้ำแห่งนี้เป็นสถานที่ประกอบพิธีกรรม ขอฝน ขอความอุดมสมบูรณ์ และความเป็นสิริมงคลให้กับชุมชน ต่อมาถ้ำพญานาคราชได้รับการดูแลและพัฒนาให้เป็นแหล่งท่องเที่ยวเชิงวัฒนธรรมและธรรมชาติ โดยยังคงรักษาความเชื่อและคุณค่าทางจิตใจของชุมชนไว้จนถึงปัจจุบัน</p>
+</div>
+</section>
+<section class="section">
+    <img src="https://cdn.spsmartvan.com/wp-content/uploads/2025/03/7.-%E0%B8%96%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%8D%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%8A.webp">
+    <div class="text">
+        <h2>ลักษณะเด่นของถ้ำพญานาคราช</h2>
+        <p>
+            ถ้ำพญานาคราชมีลักษณะเด่นคือความศักดิ์สิทธิ์และบรรยากาศลึกลับ ภายในถ้ำมีหินงอกหินย้อยที่เกิดขึ้นตามธรรมชาติอย่างสวยงาม บางส่วนมีรูปร่างคล้ายพญานาค สอดคล้องกับตำนานความเชื่อของชุมชน ทำให้ถ้ำแห่งนี้เป็นทั้งแหล่งท่องเที่ยวทางธรรมชาติและแหล่งศรัทธาทางวัฒนธรรมที่สำคัญของจังหวัดพังงา
+        </p>
+        <p>
+           บริเวณรอบถ้ำพญานาคราชรายล้อมด้วยป่าและธรรมชาติที่ยังคงความอุดมสมบูรณ์ บรรยากาศเงียบสงบ ร่มรื่น และเหมาะแก่การปฏิบัติธรรมและการท่องเที่ยวเชิงธรรมชาติ สะท้อนถึงความศักดิ์สิทธิ์และความสงบของพื้นที่โดยรอบ
+        </p>
+    </div>
+</section>
+
+<a href="/New folder/index.html" class="back">← Back to Home</a>
+
+<script>
+function startPage(){
+intro.classList.add('hide');
+hero.classList.add('show');
+centerText.classList.add('show');
+}
+const texts=document.querySelectorAll('.text');
+window.addEventListener('scroll',()=>{texts.forEach(t=>{if(t.getBoundingClientRect().top<innerHeight-120)t.classList.add('show')})});
+</script>
+</body>
+</html>
