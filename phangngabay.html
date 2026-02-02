@@ -33,7 +33,61 @@ body{background:var(--bg);color:var(--text);transition:.3s}
 .section{flex-direction:column;padding:50px 30px}
 .section img,.text{width:100%}
 .center-text h1{font-size:2.8rem}
+}.recommend {
+    padding: 60px 80px;
 }
+
+.recommend h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background: var(--bg);
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 22px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+body.dark .card {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.card.show {
+    opacity: 1;
+    transform: none;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 18px 20px 28px;
+}
+
+.card-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    opacity: .75;
+    line-height: 1.6;
+}
+
 </style>
 </head>
 <body>
@@ -50,7 +104,7 @@ body{background:var(--bg);color:var(--text);transition:.3s}
 </section>
 
 <section class="section">
-<img src="https://www.phangnga.go.th/media/k2/items/cache/1c0ae2205709722b62e843abc0471a55_XL.jpg">
+<img src="https://s359.kapook.com/pagebuilder/6d2523a4-3c66-4357-b7db-20873955023d.jpg">
 <div class="text">
 <h2>อ่าวพังงาเป็นยังไง?</h2>
 <p>อ่าวพังงาเป็นอ่าวธรรมชาติที่มีความงดงามโดดเด่นของจังหวัดพังงา มีลักษณะเป็นทะเลกว้างที่เต็มไปด้วยภูเขาหินปูนรูปร่างแปลกตาโผล่ขึ้นจากน้ำทะเลสีเขียวมรกต บริเวณอ่าวมีป่าชายเลน ถ้ำ และเกาะเล็กเกาะน้อยจำนวนมาก บรรยากาศเงียบสงบและอุดมสมบูรณ์ไปด้วยทรัพยากรธรรมชาติ ทำให้อ่าวพังงาเป็นแหล่งท่องเที่ยวทางธรรมชาติที่มีชื่อเสียงและเป็นเอกลักษณ์ของประเทศไทย</p>
@@ -65,7 +119,7 @@ body{background:var(--bg);color:var(--text);transition:.3s}
 </div>
 </section>
 <section class="section">
-    <img src="https://s359.kapook.com/pagebuilder/8dcf6ebe-1eff-450c-9e3c-117466c14a25.jpg">
+    <img src="https://www.paradise-kohyao.com/wp-content/uploads/2024/01/%E0%B8%8A%E0%B8%A1%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B0%E0%B9%80%E0%B8%A5%E0%B8%97%E0%B8%B5%E0%B9%88-%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%A7%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2-1.webp">
     <div class="text">
         <h2>ลักษณะเด่นของอ่าวพังงา</h2>
         <p>
@@ -76,7 +130,91 @@ body{background:var(--bg);color:var(--text);transition:.3s}
         </p>
     </div>
 </section>
+<section class="recommend">
+    <h2>ร้านอาหารแนะนำ</h2>
+    <div class="card-grid">
 
+        <div class="card">
+            <img src="https://scontent.fbkk31-2.fna.fbcdn.net/v/t39.30808-6/486111429_1164778768776100_8409973799208219542_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=YHOLRKRiIoIQ7kNvwGBuLEE&_nc_oc=AdkKBSpxHKf6FRdCfOaHntc5ubei30GTRTO6H6tkR3_L9M5vEV5Bij9F_MD2D9kXCDDqtT1dZY9Wpf9-5TBPLhYU&_nc_zt=23&_nc_ht=scontent.fbkk31-2.fna&_nc_gid=-8epPDN_Mynxsp0qNrkRRA&oh=00_AfvW4IpS5iOp3cZT019AU9LRezq741k3l72QVpAr9k6ImA&oe=6986870D">
+            <div class="card-text">
+                <h3>Garden House Restaurant</h3>
+                <p>ร้านคาเฟ่ตั้งอยู่ในซอยศาลจังหวัดตะกั่วป่า มีที่จอดรถกว้างขวางสะดวกสบาย ภายในห้องแอร์ ที่นั่งหลายโต๊ะ เครื่องดื่มและเค้กมีให้เลือกทานพอสมควร ส่วนเมนูของคาวก็พอมีให้เลือกทานแต่ไม่เยอะมากนัก ราคาไม่แพงจนเกินไปการบริการค่อนข้างดี</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://img.wongnai.com/p/1920x0/2020/10/11/7f165090299c4f50a79c86db877bd852.jpg">
+            <div class="card-text">
+                <h3>บ้านสวนก๋งคาเฟ่</h3>
+                <p>คาเฟ่ยอดนิยมใกล้เคียง อาหารอร่อย บรรยากาศร่มรื่น เหมาะสำหรับมื้อเบาๆ</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="recommend">
+    <h2>ที่พักแนะนำ</h2>
+    <div class="card-grid">
+
+        <div class="card">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/df/51/c8/treehouse-villas.jpg?w=700&h=-1&s=1">
+            <div class="card-text">
+                <h3>TreeHouse Villas Koh Yao Noi</h3>
+                <p>วิลล่าหรูกลางธรรมชาติ มีสปาและสระว่ายน้ำส่วนตัว</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.prod.website-files.com/5e5e201853a5527aa1e70964/61404b38f820830fd4668bbd_Drone%20Resort%20Grounds%202.jpg">
+            <div class="card-text">
+                <h3>Paradise Koh Yao Resort</h3>
+                <p>รีสอร์ทติดหาดเกาะยาวใหญ่ มีสระว่ายน้ำกลางแจ้งและร้านอาหาร</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://media.sixsenses.com/B60H3R33/at/bsn9ntqk92wnhsmqc7wbbvr/1_The_Den_night_view.jpg?format=webp&width=648&height=405&fit=crop">
+            <div class="card-text">
+                <h3>Six Senses Yao Noi</h3>
+                <p>เป็นโรงแรมเล็กๆ ห่างคลองสังเน่ห์ประมาณ 1.5 กม. มี WiFi ฟรีและรูมเซอร์วิส เหมาะคนเน้นความคุ้ม</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="recommend">
+    <h2>สถานที่ตั้ง</h2>
+    <div class="card-grid">
+
+        <div class="card">
+            <img src="https://s359.kapook.com/pagebuilder/8dcf6ebe-1eff-450c-9e3c-117466c14a25.jpg">
+            <div class="card-text">
+                <h3>พิกัดอ่าวพังงา</h3>
+                <p>อ่าวพังงาตั้งอยู่ที่ ตำบลกระโสม อำเภอตะกั่วทุ่ง จังหวัดพังงา</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.9693966437458!2d98.50560437588581!3d8.404666291633788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3051006d0d09a975%3A0x84fa3a0f2d18c4bd!2z4Lit4Li44LiX4Lii4Liy4LiZ4LmB4Lir4LmI4LiH4LiK4Liy4LiV4Li04Lit4LmI4Liy4Lin4Lie4Lix4LiH4LiH4Liy!5e0!3m2!1sth!2sth!4v1770046749725!5m2!1sth!2sth"
+    width="100%"
+    height="180"
+    style="border:0; border-radius:20px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+
+            <div class="card-text">
+                <h3>Google Maps</h3>
+                <p>นำทางไปยังอ่าวพังงา คลิกดูเส้นทางได้ทันที</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 <a href="index.html" class="back">← Back to Home</a>
 
 <script>
@@ -85,8 +223,23 @@ intro.classList.add('hide');
 hero.classList.add('show');
 centerText.classList.add('show');
 }
-const texts=document.querySelectorAll('.text');
-window.addEventListener('scroll',()=>{texts.forEach(t=>{if(t.getBoundingClientRect().top<innerHeight-120)t.classList.add('show')})});
+
+const texts = document.querySelectorAll('.text');
+window.addEventListener('scroll',()=>{
+    texts.forEach(t=>{
+        if(t.getBoundingClientRect().top < innerHeight - 120)
+            t.classList.add('show');
+    })
+});
+
+// ✨ NEW SCRIPT — ทำให้การ์ดเลื่อนขึ้นมาเหมือน section อื่น ๆ
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', ()=>{
+    cards.forEach(c=>{
+        if(c.getBoundingClientRect().top < innerHeight - 100)
+            c.classList.add('show');
+    })
+});
 </script>
 </body>
 </html>
